@@ -14,6 +14,8 @@ import {
   paymentRoutes,
 } from "./modules/bookings";
 
+const health = () => ok({ status: "ok", time: toWibIso(new Date()) });
+
 export const app = new Elysia({ name: "smash-arena-api" })
   .use(
     cors({
@@ -49,7 +51,9 @@ export const app = new Elysia({ name: "smash-arena-api" })
     set.status = 500;
     return fail("Terjadi kesalahan pada server", "INTERNAL_ERROR");
   })
-  .get("/api/health", () => ok({ status: "ok", time: toWibIso(new Date()) }))
+  .get("/", health)
+  .get("/api", health)
+  .get("/api/health", health)
   .group("/api", (group) =>
     group
       .use(authModule)
