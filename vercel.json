@@ -14,21 +14,3 @@
     { "source": "/api", "destination": "/api/health" }
   ]
 }
-  },
-  "rewrites": [
-    { "source": "/", "destination": "/api/health" },
-    { "source": "/api", "destination": "/api/health" }
-  ]
-}
-  },
-  "rewrites": [
-    { "source": "/", "destination": "/api/health" },
-    { "source": "/api", "destination": "/api/health" }
-  ]
-}
-  },
-  "rewrites": [
-    { "source": "/", "destination": "/api/health" },
-    { "source": "/api", "destination": "/api/health" }
-  ]
-}
